@@ -6,4 +6,4 @@ start explorer
 start explorer
 start explorer
 
-exit
+pause
